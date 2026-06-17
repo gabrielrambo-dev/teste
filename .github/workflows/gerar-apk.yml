@@ -9,10 +9,6 @@ jobs:
   build-apk:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: nemotron-mobile-app-corrigido
-
     steps:
       - name: Baixar projeto
         uses: actions/checkout@v4
@@ -47,4 +43,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Nemotron-Chat-APK
-          path: nemotron-mobile-app-corrigido/android/app/build/outputs/apk/debug/app-debug.apk
+          path: android/app/build/outputs/apk/debug/app-debug.apk
